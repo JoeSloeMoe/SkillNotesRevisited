@@ -1,5 +1,5 @@
 Skill Books Revisited - code is free to use.
-
+This mod was the brainchild of User Kalen on the 7DTD Community Forums
 1.0.1  23/8/2025 
  - Initial Release
    Swapped Perk Level and Nerd Outfit functionality so Perk Levels dont impact Skill Book availability
@@ -7,3 +7,4 @@ Skill Books Revisited - code is free to use.
    The Nerd Outfit increase the chance of finding Skill Books in loot
 
    
+
