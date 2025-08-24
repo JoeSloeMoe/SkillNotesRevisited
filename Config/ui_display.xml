@@ -1,0 +1,7 @@
+<configs>
+	<!--reverseSkillNotes code-->
+	<set xpath="/ui_display_info/item_display/item_display_info[@display_type='armorNerdOutfit']">
+		<display_entry name="dLootProb" title_key="statBonusNerdOutfit" display_type="Percent" display_leading_plus="true"/>
+	</set>
+	<!--END reverseSkillNotes code-->
+</configs>

@@ -1,0 +1,9 @@
+Skill Books Revisited - code is free to use.
+
+1.0.1  23/8/2025 
+ - Initial Release
+   Swapped Perk Level and Nerd Outfit functionality so Perk Levels dont impact Skill Book availability
+   Each Perk level increases the chance to get a free Skill Book point when a Skill Book is read.
+   The Nerd Outfit increase the chance of finding Skill Books in loot
+
+   

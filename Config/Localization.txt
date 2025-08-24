@@ -1,0 +1,2 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+statBonusNerdOutfit,ui_display,Item stat,,,Skill Book Loot Bonus

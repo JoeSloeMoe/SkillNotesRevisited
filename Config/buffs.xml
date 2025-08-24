@@ -1,0 +1,42 @@
+<configs>
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+	
+	<!--PLAYER CONFIG VARIABLES-->
+	<!--reverse skill notes Config variables	
+				Skill notes and Nerd outfit are reversed.
+				What this means is that in game code:
+					each point in a perk increases the chance of getting that perk's skill Book
+					the Nerd Outfit level (1-6) increases the chance of getting a free skill point when reading one of the perk's skill Book
+				In Reverse skill Notes:
+					each point in a perk increases the chance of getting a free skill book point when reading one of the the perk's skill book
+					the Nerd Outfit level (1-6) increases the chance of getting skill books (any skill book - so more chance of getting skill Books
+						instead of empty bookshelves or bits of paper)
+			-->
+			<!--There are 2 values for each perk Level: 
+				ReverseSkillLevel1Chance is the percentage chance to get a skill book point when reading a book for the perk level.(1st level in this example)
+				ReverseSkillLevel1Guaranteed (**MAX IS 5**) is the guaranteed skill book point received when reading a book for the perk level (1st level in this example)
+				The above is in addition to the default basic skill point received.
+				So for a perk level 5: if you want to have the player receive 2 skill points plus a 40% chance at a third skill book point (2.4)
+				ReverseSkillLevel5Chance==40   this is a percentage
+				ReverseSkillLevel5Guaranteed==2  this is a fixed integer amount **MAX IS 5**-->
+			<!--note that some perks are less than 5 levels e.g. armour is 4 levels, for such perks the 3rd level is ignored
+				so for armour the code uses 
+					ReverseSkillLevel1Chance, ReverseSkillLevel2Chance, ReverseSkillLevel4Chance, ReverseSkillLevel5Chance AND
+					ReverseSkillLevel1Guaranteed, ReverseSkillLevel2Guaranteed, ReverseSkillLevel4Guaranteed, ReverseSkillLevel5Guaranteed-->
+			<!--the percentage chance to get a free skill book point per perk level when reading a skill book-->
+			<effect_group>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel1Chance" operation="set" value="50"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel1Guaranteed" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel2Chance" operation="set" value="75"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel2Guaranteed" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel3Chance" operation="set" value="20"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel3Guaranteed" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel4Chance" operation="set" value="60"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel4Guaranteed" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel5Chance" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel5Guaranteed" operation="set" value="2"/>
+			</effect_group>
+			
+			<!--END reverse skill notes Config variables-->	
+	</append>
+</configs>

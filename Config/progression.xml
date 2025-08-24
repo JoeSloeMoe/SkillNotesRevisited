@@ -1,0 +1,56 @@
+
+<configs>
+	<!--reverse skill notes code, remove all loot prob of getting skill magazines-->
+	<!--miner69er-->
+	<remove xpath="progression/perks/perk[@name='perkMiner69r']/effect_group/passive_effect[@name='LootProb' and @tags='harvestingToolsCSM']"/>
+	<!--Modify existing DeadEye perk -->
+	<remove xpath="progression/perks/perk[@name='perkDeadEye']/effect_group/passive_effect[@name='LootProb' and @tags='riflesCSM']"/>
+	<!--Modify existing DemolitionsExpert perk -->
+	<remove xpath="progression/perks/perk[@name='perkDemolitionsExpert']/effect_group/passive_effect[@name='LootProb' and @tags='explosivesCSM']"/>
+	<!--Modify existing JavenlinMaster (Spearmaster) perk -->
+	<remove xpath="progression/perks/perk[@name='perkJavelinMaster']/effect_group/passive_effect[@name='LootProb' and @tags='spearsCSM']"/>
+	<!--Modify existing Salvage Operations perk -->	
+	<remove xpath="progression/perks/perk[@name='perkSalvageOperations']/effect_group/passive_effect[@name='LootProb' and @tags='salvageToolsCSM']"/>
+	<!--Modify existing Boomstick perk -->	
+	<remove xpath="progression/perks/perk[@name='perkBoomstick']/effect_group/passive_effect[@name='LootProb' and @tags='shotgunsCSM']"/>
+	<!--Modify existing PummelPete perk -->
+	<remove xpath="progression/perks/perk[@name='perkPummelPete']/effect_group/passive_effect[@name='LootProb' and @tags='clubsCSM']"/>
+	<!--Modify existing SkullCrusher perk -->
+	<remove xpath="progression/perks/perk[@name='perkSkullCrusher']/effect_group/passive_effect[@name='LootProb' and @tags='sledgehammersCSM']"/>
+	<!--Modify existing Brawler perk -->
+	<remove xpath="progression/perks/perk[@name='perkBrawler']/effect_group/passive_effect[@name='LootProb' and @tags='knucklesCSM']"/>
+	<!--Modify existing Machine Gunner perk -->	
+	<remove xpath="progression/perks/perk[@name='perkMachineGunner']/effect_group/passive_effect[@name='LootProb' and @tags='machineGunsCSM']"/>
+	<!--Modify existing perkArchery-->
+	<remove xpath="progression/perks/perk[@name='perkArchery']/effect_group/passive_effect[@name='LootProb' and @tags='bowsCSM']"/>
+	<!--Modify existing perkGunslinger-->
+	<remove xpath="progression/perks/perk[@name='perkGunslinger']/effect_group/passive_effect[@name='LootProb' and @tags='handgunsCSM']"/>
+	<!--Modify existing perkDeepCuts-->
+	<remove xpath="progression/perks/perk[@name='perkDeepCuts']/effect_group/passive_effect[@name='LootProb' and @tags='bladesCSM']"/>
+	<!--Modify existing perkElectrocutioner-->
+	<remove xpath="progression/perks/perk[@name='perkElectrocutioner']/effect_group/passive_effect[@name='LootProb' and @tags='roboticsCSM']"/>
+	<!--Modify existing perkElectrocutioner-->
+	<remove xpath="progression/perks/perk[@name='perkTurrets']/effect_group/passive_effect[@name='LootProb' and @tags='roboticsCSM']"/>
+	<!--Modify existing perkPhysician-->
+	<remove xpath="progression/perks/perk[@name='perkPhysician']/effect_group/passive_effect[@name='LootProb' and @tags='medicalCSM']"/>
+	<!--Modify existing perkAdvancedEngineering-->
+	<remove xpath="progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='LootProb' and @tags='electricianCSM']"/>
+	<remove xpath="progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='LootProb' and @tags='trapsCSM']"/>
+	<remove xpath="progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='LootProb' and @tags='workstationCSM']"/>
+	<remove xpath="progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='LootProb' and @tags='repairToolsCSM']"/>
+	<!--Modify existing perkGreaseMonkey-->
+	<remove xpath="progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@name='LootProb' and @tags='vehiclesCSM']"/>
+	<!--Modify existing perkLightArmor-->
+	<remove xpath="progression/perks/perk[@name='perkLightArmor']/effect_group/passive_effect[@name='LootProb' and @tags='armorCSM']"/>
+	<!--Modify existing perkMediumArmor-->
+	<remove xpath="progression/perks/perk[@name='perkMediumArmor']/effect_group/passive_effect[@name='LootProb' and @tags='armorCSM']"/>
+	<!--Modify existing perkHeavyArmor-->
+	<remove xpath="progression/perks/perk[@name='perkHeavyArmor']/effect_group/passive_effect[@name='LootProb' and @tags='armorCSM']"/>
+	<!--Modify existing perkMasterChef-->
+	<remove xpath="progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='LootProb' and @tags='foodCSM']"/>
+	<!--Modify existing perkLivingOffTheLand-->
+	<remove xpath="progression/perks/perk[@name='perkLivingOffTheLand']/effect_group/passive_effect[@name='LootProb' and @tags='seedCSM']"/>
+	<!--Modify existing perkLockPicking-->
+	<remove xpath="progression/perks/perk[@name='perkLockPicking']/effect_group/passive_effect[@name='LootProb' and @tags='workstationCSM']"/>
+	<!--END reverse skill notes code-->
+</configs>
