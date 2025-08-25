@@ -27,7 +27,7 @@
 			<effect_group>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel1Chance" operation="set" value="50"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel1Guaranteed" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel2Chance" operation="set" value="75"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel2Chance" operation="set" value="80"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel2Guaranteed" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel3Chance" operation="set" value="20"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel3Guaranteed" operation="set" value="1"/>
@@ -39,4 +39,5 @@
 			
 			<!--END reverse skill notes Config variables-->	
 	</append>
+
 </configs>
