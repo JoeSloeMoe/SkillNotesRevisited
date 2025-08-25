@@ -1932,37 +1932,38 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 			</effect_group>
 
-			
-			<!--effected by both perkTurrets and perkElectrocutioner so determine which one is greater and use that-->
-			<!--perkTurrets-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="1">
-				<requirement name="ProgressionLevel" progression_name="perkTurrets" operation="Equals" value="1"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="2">
-				<requirement name="ProgressionLevel" progression_name="perkTurrets" operation="Equals" value="2"/></triggered_effect>	
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="3">
-				<requirement name="ProgressionLevel" progression_name="perkTurrets" operation="Equals" value="3"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="4">
-				<requirement name="ProgressionLevel" progression_name="perkTurrets" operation="Equals" value="4"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="5">
-				<requirement name="ProgressionLevel" progression_name="perkTurrets" operation="Equals" value="5"/></triggered_effect>
+			<effect_group tiered="false">
+				<!--effected by both perkTurrets and perkElectrocutioner so determine which one is greater and use that-->
+				<!--perkTurrets-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkTurrets" operation="Equals" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="2">
+					<requirement name="ProgressionLevel" progression_name="perkTurrets" operation="Equals" value="2"/></triggered_effect>	
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="3">
+					<requirement name="ProgressionLevel" progression_name="perkTurrets" operation="Equals" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkTurrets" operation="Equals" value="4"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="5">
+					<requirement name="ProgressionLevel" progression_name="perkTurrets" operation="Equals" value="5"/></triggered_effect>
 
-			<!--Check perkElectrocutioner-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="1">
-				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="1"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="2">
-				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="2"/></triggered_effect>	
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="3">
-				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="3"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="4">
-				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="4"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="5">
-				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="5"/></triggered_effect>
-				
-			<!--select whichever is the larger-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="@$skill_PerkLevel2">
-				<requirement name="CVarCompare" cvar="$skill_PerkLevel" operation="LT" value="@$skill_PerkLevel2"/></triggered_effect>
+				<!--Check perkElectrocutioner-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="2">
+					<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="2"/></triggered_effect>	
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="3">
+					<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="4"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="5">
+					<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="5"/></triggered_effect>
+					
+				<!--select whichever is the larger-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="@$skill_PerkLevel2">
+					<requirement name="CVarCompare" cvar="$skill_PerkLevel" operation="LT" value="@$skill_PerkLevel2"/></triggered_effect>
+			</effect_group>
 			<!--for each level of the corresponding perk check for chance for skill point. see configs in buffs.xml for ReverseSkillLevel1Chance, 2, 3, 4, 5 vars
 				Each perk level increases the chance of a skill point-->
 			<effect_group tiered="false">
@@ -2094,48 +2095,48 @@
 
 			<!--for each level of the corresponding perk check for chance for skill point. see configs in buffs.xml for ReverseSkillLevel1Chance, 2, 3, 4, 5 vars
 				Each perk level increases the chance of a skill point-->
+			<effect_group tiered="false">	
+				<!--effected by perkLightArmor, perkMediumArmor and perkHeavyArmor so determine which one is greater and use that-->
+				<!--perkLightArmor-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkLightArmor" operation="Equals" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="2">
+					<requirement name="ProgressionLevel" progression_name="perkLightArmor" operation="Equals" value="2"/></triggered_effect>	
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="3">
+					<requirement name="ProgressionLevel" progression_name="perkLightArmor" operation="Equals" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkLightArmor" operation="Equals" value="4"/></triggered_effect>
+
+				<!--Check perkMediumArmor-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkMediumArmor" operation="Equals" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="2">
+					<requirement name="ProgressionLevel" progression_name="perkMediumArmor" operation="Equals" value="2"/></triggered_effect>	
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="3">
+					<requirement name="ProgressionLevel" progression_name="perkMediumArmor" operation="Equals" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkMediumArmor" operation="Equals" value="4"/></triggered_effect>
 				
-			<!--effected by perkLightArmor, perkMediumArmor and perkHeavyArmor so determine which one is greater and use that-->
-			<!--perkLightArmor-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="1">
-				<requirement name="ProgressionLevel" progression_name="perkLightArmor" operation="Equals" value="1"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="2">
-				<requirement name="ProgressionLevel" progression_name="perkLightArmor" operation="Equals" value="2"/></triggered_effect>	
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="3">
-				<requirement name="ProgressionLevel" progression_name="perkLightArmor" operation="Equals" value="3"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="4">
-				<requirement name="ProgressionLevel" progression_name="perkLightArmor" operation="Equals" value="4"/></triggered_effect>
+				<!--Check perkHeavyArmor-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel3" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel3" operation="set" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkHeavyArmor" operation="Equals" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel3" operation="set" value="2">
+					<requirement name="ProgressionLevel" progression_name="perkHeavyArmor" operation="Equals" value="2"/></triggered_effect>	
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel3" operation="set" value="3">
+					<requirement name="ProgressionLevel" progression_name="perkHeavyArmor" operation="Equals" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel3" operation="set" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkHeavyArmor" operation="Equals" value="4"/></triggered_effect>
 
-			<!--Check perkMediumArmor-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="1">
-				<requirement name="ProgressionLevel" progression_name="perkMediumArmor" operation="Equals" value="1"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="2">
-				<requirement name="ProgressionLevel" progression_name="perkMediumArmor" operation="Equals" value="2"/></triggered_effect>	
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="3">
-				<requirement name="ProgressionLevel" progression_name="perkMediumArmor" operation="Equals" value="3"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="4">
-				<requirement name="ProgressionLevel" progression_name="perkMediumArmor" operation="Equals" value="4"/></triggered_effect>
-			
-			<!--Check perkHeavyArmor-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel3" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel3" operation="set" value="1">
-				<requirement name="ProgressionLevel" progression_name="perkHeavyArmor" operation="Equals" value="1"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel3" operation="set" value="2">
-				<requirement name="ProgressionLevel" progression_name="perkHeavyArmor" operation="Equals" value="2"/></triggered_effect>	
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel3" operation="set" value="3">
-				<requirement name="ProgressionLevel" progression_name="perkHeavyArmor" operation="Equals" value="3"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel3" operation="set" value="4">
-				<requirement name="ProgressionLevel" progression_name="perkHeavyArmor" operation="Equals" value="4"/></triggered_effect>
-
-			<!--select whichever is the larger-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="@$skill_PerkLevel2">
-				<requirement name="CVarCompare" cvar="$skill_PerkLevel" operation="LT" value="@$skill_PerkLevel2"/></triggered_effect>	
-			<!--select whichever is the larger-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="@$skill_PerkLevel3">
-				<requirement name="CVarCompare" cvar="$skill_PerkLevel" operation="LT" value="@$skill_PerkLevel3"/></triggered_effect>	
-
+				<!--select whichever is the larger-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="@$skill_PerkLevel2">
+					<requirement name="CVarCompare" cvar="$skill_PerkLevel" operation="LT" value="@$skill_PerkLevel2"/></triggered_effect>	
+				<!--select whichever is the larger-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="@$skill_PerkLevel3">
+					<requirement name="CVarCompare" cvar="$skill_PerkLevel" operation="LT" value="@$skill_PerkLevel3"/></triggered_effect>	
+			</effect_group>
 			<effect_group tiered="false">
 				<requirement name="CVarCompare" cvar="$skill_PerkLevel"  operation="Equals" value="1"/>
 				<requirement name="CVarCompare" cvar="ReverseSkillLevel1Chance" operation="GT" value="0"/>
@@ -2382,31 +2383,18 @@
 			<effect_group tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkMasterChef" operation="Equals" value="2"/>
 				<requirement name="CVarCompare" cvar="ReverseSkillLevel2Chance" operation="GT" value="0"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@ReverseSkillLevel2Chance"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@ReverseSkillLevel3Chance"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="1"/> <!-- level="-1" sets a perk to max level -->
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
 			</effect_group>
 			<effect_group tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkMasterChef" operation="Equals" value="3"/>
 				<requirement name="CVarCompare" cvar="ReverseSkillLevel3Chance" operation="GT" value="0"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@ReverseSkillLevel3Chance"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="1"/> <!-- level="-1" sets a perk to max level -->
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
-			</effect_group>
-			<effect_group tiered="false">
-				<requirement name="ProgressionLevel" progression_name="perkMasterChef" operation="Equals" value="4"/>
-				<requirement name="CVarCompare" cvar="ReverseSkillLevel4Chance" operation="GT" value="0"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@ReverseSkillLevel4Chance"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="1"/> <!-- level="-1" sets a perk to max level -->
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
-			</effect_group>
-			<effect_group tiered="false">
-				<requirement name="ProgressionLevel" progression_name="perkMasterChef" operation="Equals" value="5"/>
-				<requirement name="CVarCompare" cvar="ReverseSkillLevel5Chance" operation="GT" value="0"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@ReverseSkillLevel5Chance"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="1"/> <!-- level="-1" sets a perk to max level -->
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
 			</effect_group>
+			
 			
 			<!--for each level of the corresponding perk check for the guranteed for skill point. see configs in buffs.xml for ReverseSkillLevel1Guaranteed, 2, 3, 4, 5 vars-->
 			<effect_group tiered="false">
@@ -2428,21 +2416,6 @@
 				<requirement name="ProgressionLevel" progression_name="perkMasterChef" operation="Equals" value="2"/>
 				<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="GT" value="0"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="1">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="Equals" value="1"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="2">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="Equals" value="2"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="3">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="Equals" value="3"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="4">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="Equals" value="4"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="5">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="Equals" value="5"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
-			</effect_group>
-			<effect_group tiered="false">
-				<requirement name="ProgressionLevel" progression_name="perkMasterChef" operation="Equals" value="3"/>
-				<requirement name="CVarCompare" cvar="ReverseSkillLevel3Guaranteed" operation="GT" value="0"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="1">
 						<requirement name="CVarCompare" cvar="ReverseSkillLevel3Guaranteed" operation="Equals" value="1"/></triggered_effect>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="2">
 						<requirement name="CVarCompare" cvar="ReverseSkillLevel3Guaranteed" operation="Equals" value="2"/></triggered_effect>
@@ -2455,23 +2428,8 @@
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
 			</effect_group>
 			<effect_group tiered="false">
-				<requirement name="ProgressionLevel" progression_name="perkMasterChef" operation="Equals" value="4"/>
-				<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="GT" value="0"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="1">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="Equals" value="1"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="2">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="Equals" value="2"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="3">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="Equals" value="3"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="4">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="Equals" value="4"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="5">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="Equals" value="5"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
-			</effect_group>
-			<effect_group tiered="false">
-				<requirement name="ProgressionLevel" progression_name="perkMasterChef" operation="Equals" value="5"/>
-				<requirement name="CVarCompare" cvar="ReverseSkillLevel5Guaranteed" operation="GT" value="0"/>
+				<requirement name="ProgressionLevel" progression_name="perkMasterChef" operation="Equals" value="3"/>
+				<requirement name="CVarCompare" cvar="ReverseSkillLevel3Guaranteed" operation="GT" value="0"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="1">
 						<requirement name="CVarCompare" cvar="ReverseSkillLevel5Guaranteed" operation="Equals" value="1"/></triggered_effect>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFood" level="2">
@@ -2484,6 +2442,7 @@
 						<requirement name="CVarCompare" cvar="ReverseSkillLevel5Guaranteed" operation="Equals" value="5"/></triggered_effect>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
 			</effect_group>
+
 		</item>
 
 			<!-- *** Seed_Skill_Magazine -->
@@ -2499,6 +2458,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 			</effect_group>
 
+			
 			<!--for each level of the corresponding perk check for chance for skill point. see configs in buffs.xml for ReverseSkillLevel1Chance, 2, 3, 4, 5 vars
 				Each perk level increases the chance of a skill point-->
 			<effect_group tiered="false">
@@ -2511,31 +2471,18 @@
 			<effect_group tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="2"/>
 				<requirement name="CVarCompare" cvar="ReverseSkillLevel2Chance" operation="GT" value="0"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@ReverseSkillLevel2Chance"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@ReverseSkillLevel3Chance"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="1"/> <!-- level="-1" sets a perk to max level -->
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
 			</effect_group>
 			<effect_group tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="3"/>
 				<requirement name="CVarCompare" cvar="ReverseSkillLevel3Chance" operation="GT" value="0"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@ReverseSkillLevel3Chance"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="1"/> <!-- level="-1" sets a perk to max level -->
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
-			</effect_group>
-			<effect_group tiered="false">
-				<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="4"/>
-				<requirement name="CVarCompare" cvar="ReverseSkillLevel4Chance" operation="GT" value="0"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@ReverseSkillLevel4Chance"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="1"/> <!-- level="-1" sets a perk to max level -->
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
-			</effect_group>
-			<effect_group tiered="false">
-				<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="5"/>
-				<requirement name="CVarCompare" cvar="ReverseSkillLevel5Chance" operation="GT" value="0"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@ReverseSkillLevel5Chance"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="1"/> <!-- level="-1" sets a perk to max level -->
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
 			</effect_group>
+
 			
 			<!--for each level of the corresponding perk check for the guranteed for skill point. see configs in buffs.xml for ReverseSkillLevel1Guaranteed, 2, 3, 4, 5 vars-->
 			<effect_group tiered="false">
@@ -2557,21 +2504,6 @@
 				<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="2"/>
 				<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="GT" value="0"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="1">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="Equals" value="1"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="2">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="Equals" value="2"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="3">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="Equals" value="3"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="4">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="Equals" value="4"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="5">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel2Guaranteed" operation="Equals" value="5"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
-			</effect_group>
-			<effect_group tiered="false">
-				<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="3"/>
-				<requirement name="CVarCompare" cvar="ReverseSkillLevel3Guaranteed" operation="GT" value="0"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="1">
 						<requirement name="CVarCompare" cvar="ReverseSkillLevel3Guaranteed" operation="Equals" value="1"/></triggered_effect>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="2">
 						<requirement name="CVarCompare" cvar="ReverseSkillLevel3Guaranteed" operation="Equals" value="2"/></triggered_effect>
@@ -2584,23 +2516,8 @@
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
 			</effect_group>
 			<effect_group tiered="false">
-				<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="4"/>
-				<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="GT" value="0"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="1">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="Equals" value="1"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="2">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="Equals" value="2"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="3">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="Equals" value="3"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="4">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="Equals" value="4"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="5">
-						<requirement name="CVarCompare" cvar="ReverseSkillLevel4Guaranteed" operation="Equals" value="5"/></triggered_effect>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
-			</effect_group>
-			<effect_group tiered="false">
-				<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="5"/>
-				<requirement name="CVarCompare" cvar="ReverseSkillLevel5Guaranteed" operation="GT" value="0"/>
+				<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="3"/>
+				<requirement name="CVarCompare" cvar="ReverseSkillLevel3Guaranteed" operation="GT" value="0"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="1">
 						<requirement name="CVarCompare" cvar="ReverseSkillLevel5Guaranteed" operation="Equals" value="1"/></triggered_effect>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="2">
@@ -2885,39 +2802,41 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingWorkstations" level="1"/> <!-- level="-1" sets a perk to max level -->
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 			</effect_group>
+			
+			<effect_group tiered="false">
+				<!--for each level of the corresponding perk check for chance for skill point. see configs in buffs.xml for ReverseSkillLevel1Chance, 2, 3, 4, 5 vars
+					Each perk level increases the chance of a skill point-->
+				<!--effected by both perkAdvancedEngineering and perkLockPicking so determine which one is greater and use that-->
+				<!--perkTurrets-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkAdvancedEngineering" operation="Equals" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="2">
+					<requirement name="ProgressionLevel" progression_name="perkAdvancedEngineering" operation="Equals" value="2"/></triggered_effect>	
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="3">
+					<requirement name="ProgressionLevel" progression_name="perkAdvancedEngineering" operation="Equals" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkAdvancedEngineering" operation="Equals" value="4"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="5">
+					<requirement name="ProgressionLevel" progression_name="perkAdvancedEngineering" operation="Equals" value="5"/></triggered_effect>
 
-			<!--for each level of the corresponding perk check for chance for skill point. see configs in buffs.xml for ReverseSkillLevel1Chance, 2, 3, 4, 5 vars
-				Each perk level increases the chance of a skill point-->
-			<!--effected by both perkAdvancedEngineering and perkLockPicking so determine which one is greater and use that-->
-			<!--perkTurrets-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="1">
-				<requirement name="ProgressionLevel" progression_name="perkAdvancedEngineering" operation="Equals" value="1"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="2">
-				<requirement name="ProgressionLevel" progression_name="perkAdvancedEngineering" operation="Equals" value="2"/></triggered_effect>	
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="3">
-				<requirement name="ProgressionLevel" progression_name="perkAdvancedEngineering" operation="Equals" value="3"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="4">
-				<requirement name="ProgressionLevel" progression_name="perkAdvancedEngineering" operation="Equals" value="4"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="5">
-				<requirement name="ProgressionLevel" progression_name="perkAdvancedEngineering" operation="Equals" value="5"/></triggered_effect>
-
-			<!--Check perkElectrocutioner-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="1">
-				<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="Equals" value="1"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="2">
-				<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="Equals" value="2"/></triggered_effect>	
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="3">
-				<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="Equals" value="3"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="4">
-				<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="Equals" value="4"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="5">
-				<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="Equals" value="5"/></triggered_effect>
-				
-			<!--select whichever is the larger-->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="@$skill_PerkLevel2">
-				<requirement name="CVarCompare" cvar="$skill_PerkLevel" operation="LT" value="@$skill_PerkLevel2"/></triggered_effect>
+				<!--Check perkElectrocutioner-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="Equals" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="2">
+					<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="Equals" value="2"/></triggered_effect>	
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="3">
+					<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="Equals" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="Equals" value="4"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel2" operation="set" value="5">
+					<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="Equals" value="5"/></triggered_effect>
+					
+				<!--select whichever is the larger-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$skill_PerkLevel" operation="set" value="@$skill_PerkLevel2">
+					<requirement name="CVarCompare" cvar="$skill_PerkLevel" operation="LT" value="@$skill_PerkLevel2"/></triggered_effect>
+			</effect_group>
 			<!--for each level of the corresponding perk check for chance for skill point. see configs in buffs.xml for ReverseSkillLevel1Chance, 2, 3, 4, 5 vars
 				Each perk level increases the chance of a skill point-->
 			<effect_group tiered="false">
