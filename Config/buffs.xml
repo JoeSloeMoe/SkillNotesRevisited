@@ -20,6 +20,7 @@
 				ReverseSkillLevel5Chance==40   this is a percentage
 				ReverseSkillLevel5Guaranteed==2  this is a fixed integer amount **MAX IS 5**-->
 			<!--note that some perks are less than 5 levels e.g. armour is 4 levels, for such perks the 3rd level is ignored
+				For perk with 3 progressions e.g. Living off the land the 2nd and 4th is ignored (MasterChef & Living off the Land).
 				so for armour the code uses 
 					ReverseSkillLevel1Chance, ReverseSkillLevel2Chance, ReverseSkillLevel4Chance, ReverseSkillLevel5Chance AND
 					ReverseSkillLevel1Guaranteed, ReverseSkillLevel2Guaranteed, ReverseSkillLevel4Guaranteed, ReverseSkillLevel5Guaranteed-->
@@ -41,3 +42,4 @@
 	</append>
 
 </configs>
+
