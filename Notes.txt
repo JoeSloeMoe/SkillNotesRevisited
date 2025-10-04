@@ -1,10 +1,32 @@
 Skill Books Revisited - code is free to use.
 This mod was the brainchild of User Kalen on the 7DTD Community Forums
-1.0.1  23/8/2025 
+
+1.0.1  15/9/2025 
  - Initial Release
    Swapped Perk Level and Nerd Outfit functionality so Perk Levels dont impact Skill Book availability
    Each Perk level increases the chance to get a free Skill Book point when a Skill Book is read.
    The Nerd Outfit increase the chance of finding Skill Books in loot
-
    
+   
+   
+ - Basically swapped the Perk Skill Books probability and the Nerd Outfit functionality.
 
+- Perk levels now increase the chance to gain a skill book point when you read a skill note. Can change the chance per level in buffs.xml config settings.
+
+- Nerd Outfit now increase the probability of finding any Skill Books (instead of empty bookcases and paper etc.)
+
+- Skill books are no longer nobbled by investing in certain perks, the probability of finding skill books is only effected by the Nerd Outfit not Perk Levels.
+
+- Current default setting (see buffs.xml to configure with any changes). 
+
+        - perk level 1: 10% chance of an extra skill book point
+
+        - perk level 2: 25% chance of an extra skill book point
+
+        - perk level 3: 40% chance of an extra skill book point
+
+        - perk level 4: 60% chance of an extra skill book point
+
+        - perk level 5: 80% chance of an extra skill book point
+   
+ - You can also set a guaranteed extra skill book point for each level as well.

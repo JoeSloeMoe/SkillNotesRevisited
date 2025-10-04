@@ -20,26 +20,23 @@
 				ReverseSkillLevel5Chance==40   this is a percentage
 				ReverseSkillLevel5Guaranteed==2  this is a fixed integer amount **MAX IS 5**-->
 			<!--note that some perks are less than 5 levels e.g. armour is 4 levels, for such perks the 3rd level is ignored
-				For perk with 3 progressions e.g. Living off the land the 2nd and 4th is ignored (MasterChef & Living off the Land).
 				so for armour the code uses 
 					ReverseSkillLevel1Chance, ReverseSkillLevel2Chance, ReverseSkillLevel4Chance, ReverseSkillLevel5Chance AND
 					ReverseSkillLevel1Guaranteed, ReverseSkillLevel2Guaranteed, ReverseSkillLevel4Guaranteed, ReverseSkillLevel5Guaranteed-->
 			<!--the percentage chance to get a free skill book point per perk level when reading a skill book-->
 			<effect_group>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel1Chance" operation="set" value="50"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel1Chance" operation="set" value="10"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel1Guaranteed" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel2Chance" operation="set" value="80"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel2Chance" operation="set" value="25"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel2Guaranteed" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel3Chance" operation="set" value="20"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel3Guaranteed" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel3Chance" operation="set" value="40"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel3Guaranteed" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel4Chance" operation="set" value="60"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel4Guaranteed" operation="set" value="1"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel5Chance" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel5Guaranteed" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel4Guaranteed" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel5Chance" operation="set" value="80"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ReverseSkillLevel5Guaranteed" operation="set" value="0"/>
 			</effect_group>
 			
 			<!--END reverse skill notes Config variables-->	
 	</append>
-
 </configs>
-
